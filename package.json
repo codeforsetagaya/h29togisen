@@ -18,6 +18,7 @@
   "homepage": "https://github.com/codeforsetagaya/h29togisen#readme",
   "dependencies": {
     "csv": "^1.1.1",
-    "csv-parse": "^1.2.0"
+    "csv-parse": "^1.2.0",
+    "opts": "^1.2.6"
   }
 }
