@@ -16,15 +16,14 @@ opts.parse([
 
 var index = opts.get('index') || 0;
 
-//child_process.execSync関数を利用する
-//var result = "" + execSync('cat *.js bad_file | wc -l');
-
 var parser = parse({delimiter: ','}, function(err, data){
   //var result = "" + execSync('cat *.js bad_file | wc -l');
   data.slice(index).forEach(function(row){
+    // skip candaite who isn't online
     if (row[6] == 'なし') {
       return;
     }
+    // skip facebook page
     if (row[6].startsWith('https://www.facebook.com', 0)) {
       return;
     }
@@ -35,7 +34,6 @@ var parser = parse({delimiter: ','}, function(err, data){
     catch (err) {
       console.log("error on:" + row[6]);
     }
-    //console.log(result);
   });
 });
 
