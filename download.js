@@ -29,7 +29,12 @@ var parser = parse({delimiter: ','}, function(err, data){
       return;
     }
     console.log("downloading " + row[6]);
-    var result = execSync('wget -q -r -L -T 60 -nc -w 1 -P ./temp/' + row[0] + " " + row[6]);
+    try {
+      var result = execSync('wget -r -T 30 -nc -l 2 -np -w 1 -P ./temp/' + row[0] + " " + row[6]);
+    }
+    catch (err) {
+      console.log("error on:" + row[6]);
+    }
     //console.log(result);
   });
 });
