@@ -39,5 +39,20 @@ $ grep 'オリンピック' -rin ./temp | awk -F "/" '{print $3}' | uniq -c | so
    1 山口拓
 ```
 
+## 待機児童の言及回数
+
+```
+$ grep '待機児童' -rin ./temp | awk -F "/" '{print $3}' | uniq -c | sort -r
+  46 木村基成
+  15 ひえしま進
+  10 三浦しずか
+   9 栗林のり子
+   8 里吉ゆみ
+   6 ふじた孝行
+   3 岡本京子
+   1 マック赤坂
+   1 後藤雄一
+```
+
 # データ元
 http://www.h29togisen.metro.tokyo.jp/election/list.html
