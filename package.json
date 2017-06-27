@@ -1,0 +1,23 @@
+{
+  "name": "h29togisen",
+  "version": "1.0.0",
+  "description": "ASAP!",
+  "main": "download.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/codeforsetagaya/h29togisen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeforsetagaya/h29togisen/issues"
+  },
+  "homepage": "https://github.com/codeforsetagaya/h29togisen#readme",
+  "dependencies": {
+    "csv": "^1.1.1",
+    "csv-parse": "^1.2.0"
+  }
+}
